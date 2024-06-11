@@ -7,13 +7,18 @@
         {% static 'inicio/images/contac.png' %}
 {% endblock  %}
 {%block text%}Contacto {%endblock%}
-{% block contenido %}
-<div class="page-content">
-  <div class="page-header">
-    <div class="page-title">
-      <h3>Contacto <small>Ingresa tus datos</small></h3>
-  </div>
-  </div>
+{% block  snap%}INFO{% endblock  %}
+{% block  subtitulo%}
+<div class="page-header">
+  <div class="page-title">
+    <h3>Contacto <small>Ingresa tus datos</small></h3>
+</div>
+</div>
+{% endblock  %}
+{% block nav %}
+
+{% endblock %}  
+  {% block contenido %}
   <form class="form-horizontal" action="#" role="form">
     <div class="panel panel-default">
       <div class="panel-body">
@@ -29,10 +34,9 @@
             <textarea cols="50" rows="10" class="form-control"></textarea>
         </div>
         <div class="form-actions text-right">
-          <input type="submit" value="Enviar" class="btn btn-primary" />
+          <input type="submit" value="Enviar" class="btn btn-primary"/>
         </div>
       </div>
     </div>
   </form>
-</div>
 {% endblock %}

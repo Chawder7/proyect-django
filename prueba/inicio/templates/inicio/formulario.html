@@ -5,9 +5,9 @@
         {% static 'inicio/images/registrar.png' %}
 {% endblock  %}
 {%block text%}Registro {%endblock%}
-{% block  contenido%}
-		<!-- Contenido Principal-->
-        <div class="page-content">
+{% block  snap%}NEW{% endblock  %}
+{%block subtitulo%}
+<!-- Contenido Principal-->
 			<!--Encabezdo -->
 			<div class="page-header">
 				<div class="page-title">
@@ -16,8 +16,11 @@
 				</div>
 				
 			</div>
-			<!-- /Encabezado-->
+{% endblock %}	
+{% block nav %}
 
+{% endblock %}
+{% block  contenido%}
 			<!-- Formulario -->
 			<form class="form-horizontal" action="#" role="form">
 	            <div class="panel panel-default">
@@ -62,7 +65,5 @@
 				    </div>
 				</div>
 			</form>
-		<!-- Fin del Formulario -->
-		</div>
 		<!-- /Contenido Principal-->
 {% endblock %}
