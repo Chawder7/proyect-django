@@ -80,7 +80,7 @@
 		
 		<div class="breadcrumb-line">
             <ul class="breadcrumb">			
-                <a href="{%block nav%}{%endblock%}">
+                <a href="{% url "Principal" %}">
                     {%if request.path == '/'%}
                         Principal
                     {% else %}
