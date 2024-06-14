@@ -6,6 +6,7 @@ class Alumnos(models.Model):
     nombre = models.TextField()
     carrera = models.TextField()
     turno = models.CharField(max_length=10)
+    imagen = models.ImageField(null=True,upload_to="fotos",verbose_name="Fotografia")
     created = models.DateTimeField(auto_now_add=True,verbose_name="Fecha de Creaacion")
     update = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de actualizacion")
 
