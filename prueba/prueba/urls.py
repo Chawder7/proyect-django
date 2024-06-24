@@ -22,9 +22,10 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views_reg.principal, name="Principal"),
-    path('contacto/',views.contacto,name="Contacto"),
+    path('contacto/',views_reg.contacto,name="Contacto"),
     path('formulario/',views.formulario,name="Formulario"),
-    path('ejemplo/',views.ejemplo,name="ejemplo")
+    path('ejemplo/',views.ejemplo,name="ejemplo"),
+    path('registrar/',views_reg.registrar,name="Registrar")
 ]
 
 if settings.DEBUG:
