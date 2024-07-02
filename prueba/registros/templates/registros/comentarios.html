@@ -1,0 +1,44 @@
+{% extends "inicio/encabezado.html" %}
+{% block  titulo%}
+Comentatio
+{% endblock  %}
+{% block imagen %}
+{% load static %}
+{% static "inicio/images/msm.png" %}
+{% endblock  %}
+{% block  text%}Comentario{% endblock  %}
+{% block  snap%}Com{% endblock  %}
+{% block  subtitulo%}
+<div class="page-header">
+    <div class="page-title">
+        <h3>Comentarios
+        <small>Lista de Comentarios </small></h3>
+    </div>
+</div>
+{% endblock  %}
+{% block  contenido%}
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Mensaje</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tboody>
+        {% for comentario in comentarios %}
+            <tr>
+                <td class="text-center">{{comentario.usuario}}</td>
+                <td class="text-semibold">{{comentario.mensaje}}</td>
+                <td class="text-center">
+                    <a href="{% url "ConsultaIndiv" comentario.id%}">Editar</a>
+                </td>
+                <td class="text-center"> 
+                    <a href="{% url "Eliminar" comentario.id%}">Eliminar</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tboody>
+ </table>
+{% endblock  %}
