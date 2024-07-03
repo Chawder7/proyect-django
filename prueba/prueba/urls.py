@@ -29,7 +29,14 @@ urlpatterns = [
     path('comentario/',views_reg.comentario,name="Comentario"),
     path('eliminarComentario/<int:id>/', views_reg.eliminarComentarioContacto,name="Eliminar"),
     path('editarComentario/<int:id>/',views_reg.editarComentarioContacto,name="Editar"),
-    path('formEditarComentario/<int:id>/',views_reg.consultaComentarioindividual,name="ConsultaIndiv")
+    path('formEditarComentario/<int:id>/',views_reg.consultaComentarioindividual,name="ConsultaIndiv"),
+    path('consulta1/',views_reg.consulta1,name="Consultas1"),
+    path('consulta2/',views_reg.consulta2,name="Consultas2"),
+    path('consulta3/',views_reg.consulta3,name="Consultas3"),
+    path('consulta4/',views_reg.consulta4,name="Consultas4"),
+    path('consulta5/',views_reg.consulta5,name="Consultas5"),
+    path('consulta6/',views_reg.consulta6,name="Consultas6"),
+    path('consulta7/',views_reg.consulta7,name="Consultas7"),
 ]
 
 if settings.DEBUG:
