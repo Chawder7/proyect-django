@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Alumnos,ComentarioContacto
-from .forms import ComtarioContactoForm
+from .models import Alumnos,ComentarioContacto, Archivos
+from .forms import ComtarioContactoForm, FormArchivos
+from django.contrib import messages
 import datetime
 
 # Create your views here.
@@ -76,3 +77,18 @@ def consulta6(request):
 def consulta7(request):
     alumnos = Alumnos.objects.filter(comentario__coment__contains='No inscrito')
     return render(request,"registros/consultas.html",{'alumnos':alumnos})
+
+def archivos(request):
+    if request.method == 'POST':
+        form = FormArchivos(request.POST, request.FILES)
+        if form.is_valid():
+            titulo = request.POST['titulo']
+            descripcion = request.POST['descripcion']
+            archivo = request.FILES['archivo']
+            insert = Archivos(titulo=titulo, descripcion=descripcion, archivo=archivo)
+            insert.save()
+            return render(request, "registros/archivos.html")
+        else:
+            messages.error(request, "Error al procesar el formulario")
+    else:
+        return render(request,"registros/archivos.html",{'archivo':Archivos}) 

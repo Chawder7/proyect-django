@@ -37,6 +37,7 @@ urlpatterns = [
     path('consulta5/',views_reg.consulta5,name="Consultas5"),
     path('consulta6/',views_reg.consulta6,name="Consultas6"),
     path('consulta7/',views_reg.consulta7,name="Consultas7"),
+    path('subir/',views_reg.archivos,name="Subir")
 ]
 
 if settings.DEBUG:

@@ -1,7 +1,7 @@
 from typing import Any
 from django.contrib import admin
 from django.http import HttpRequest
-from .models import Alumnos, Comentario, ComentarioContacto
+from .models import Alumnos, Comentario, ComentarioContacto,Archivos
 
 
 # Register your models here.
@@ -34,4 +34,8 @@ class AdminContacto(admin.ModelAdmin):
     readonly_fields = ('created','id')
 
 admin.site.register(ComentarioContacto, AdminContacto)
+
+class AdminArchivos(admin.ModelAdmin):
+    list_display = ('id','titulo')
+admin.site.register(Archivos,AdminArchivos)
 
