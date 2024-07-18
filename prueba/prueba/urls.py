@@ -39,6 +39,7 @@ urlpatterns = [
     path('consulta7/',views_reg.consulta7,name="Consultas7"),
     path('subir/',views_reg.archivos,name="Subir"),
     path('consultasSQL/',views_reg.consultasSQL,name="sql"),
+    path('seguridad/',views_reg.seguridad,name="Seguridad"),
 ]
 
 if settings.DEBUG:
